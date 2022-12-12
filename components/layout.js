@@ -26,6 +26,16 @@ export default function Layout({ Component, pageProps, children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+
+        {/* ------------------------------------------ Option #1 ------------------------------------------  */}
+
+        {/* <Script
+          src="/static/utag-local.js"
+          strategy="beforeInteractive"
+        /> */}
+
+        {/* ------------------------------------------ Option #2 ------------------------------------------  */}
+
         {/* <script dangerouslySetInnerHTML={{
           __html: `window.utag_cfg_ovrd = window.utag_cfg_ovrd || {}; window.utag_cfg_ovrd.noview = true;
           (function (a, b, c, d) {
@@ -33,13 +43,13 @@ export default function Layout({ Component, pageProps, children, home }) {
             b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
             a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
         })();`}} /> */}
-        {/* <Script
-          src="/static/utagLocalScript.js"
-          strategy="beforeInteractive"
-        /> */}
+
+        {/* ------------------------------------------ Option #3 ------------------------------------------  */}
+
+        <script type="text/javascript" src="/static/utag-local.js"></script>
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-        <script type="text/javascript" src="/static/utag-local.js"></script>
+
         <script type="text/javascript" src="/static/utag-selectors.js"></script>
 
       </Head>

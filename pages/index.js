@@ -13,8 +13,7 @@ export default function Home({ allPostsData }) {
 
   useEffect(() => {
     window.utag.view({
-      "page_name": "Blog",
-      "event": "View"
+      "adl_site_hierarchy": ["dashboard"], "adl_category": "poc-dashboard", "adl_subcategory": "", "adl_language": "en", "adl_country": "US", "adl_page_type": "", "page_name": "PoC Dashboard", "adl_page_url": "https://mango-moss-0df475f10.2.azurestaticapps.net/index.html"
     });
     console.log(window.utag);
   }, []);
